@@ -1,0 +1,18 @@
+﻿@model Resume.Models.Entity.tblyetenekler
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Yetenek Ekleme Sayfası</h4>
+<br />
+<form class="form-group" method="post"> 
+    @Html.Label("Yetenek Adı : ")
+    @Html.TextBoxFor(x => x.yetenek, new { @class = "form-control" })<br />
+
+    @Html.Label("Yetenek Derecesi : ")
+    @Html.TextBoxFor(x => x.oran, new { @class = "form-control" })<br />
+
+    <button class="btn-success">Yeni Yetenek Ekle </button>
+</form>

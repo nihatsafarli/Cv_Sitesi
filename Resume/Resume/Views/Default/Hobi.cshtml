@@ -1,0 +1,11 @@
+﻿@using Resume.Models.Entity
+@model List<tblhobiler>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Hobiler</h2>
+    @foreach (var item in Model) { 
+    <p>@item.hobiler</p>   
+    }
+</div>
+

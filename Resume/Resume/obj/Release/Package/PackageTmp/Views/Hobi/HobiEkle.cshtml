@@ -1,0 +1,13 @@
+﻿@model Resume.Models.Entity.tblhobiler
+@{
+    ViewBag.Title = "HobiEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h4>Yeni Hobi Ekleme Sayfası</h4>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Hobi  : ")
+    @Html.TextBoxFor(x => x.hobiler, new { @class = "form-control" })<br />
+    <button class="btn-success">Yeni Hobi Ekle </button>
+</form>

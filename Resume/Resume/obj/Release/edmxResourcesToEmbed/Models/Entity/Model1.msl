@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbResumeModelStoreContainer" CdmEntityContainer="DbResumeEntities">
+    <EntitySetMapping Name="tbladmin">
+      <EntityTypeMapping TypeName="DbResumeModel.tbladmin">
+        <MappingFragment StoreEntitySet="tbladmin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kullaniciadi" ColumnName="kullaniciadi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbldeneyimler">
+      <EntityTypeMapping TypeName="DbResumeModel.tbldeneyimler">
+        <MappingFragment StoreEntitySet="tbldeneyimler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="altbaslik" ColumnName="altbaslik" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblegitimler">
+      <EntityTypeMapping TypeName="DbResumeModel.tblegitimler">
+        <MappingFragment StoreEntitySet="tblegitimler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="altbaslik1" ColumnName="altbaslik1" />
+          <ScalarProperty Name="altbaslik2" ColumnName="altbaslik2" />
+          <ScalarProperty Name="gno" ColumnName="gno" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblhakkimda">
+      <EntityTypeMapping TypeName="DbResumeModel.tblhakkimda">
+        <MappingFragment StoreEntitySet="tblhakkimda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblhobiler">
+      <EntityTypeMapping TypeName="DbResumeModel.tblhobiler">
+        <MappingFragment StoreEntitySet="tblhobiler">
+          <ScalarProperty Name="hobiler" ColumnName="hobiler" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbliletisim">
+      <EntityTypeMapping TypeName="DbResumeModel.tbliletisim">
+        <MappingFragment StoreEntitySet="tbliletisim">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="konu" ColumnName="konu" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsertifikalar">
+      <EntityTypeMapping TypeName="DbResumeModel.tblsertifikalar">
+        <MappingFragment StoreEntitySet="tblsertifikalar">
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblyetenekler">
+      <EntityTypeMapping TypeName="DbResumeModel.tblyetenekler">
+        <MappingFragment StoreEntitySet="tblyetenekler">
+          <ScalarProperty Name="oran" ColumnName="oran" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="yetenek" ColumnName="yetenek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsosyalmedya">
+      <EntityTypeMapping TypeName="DbResumeModel.tblsosyalmedya">
+        <MappingFragment StoreEntitySet="tblsosyalmedya">
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

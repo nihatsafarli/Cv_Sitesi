@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbResumeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbladmin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullaniciadi" Type="varchar" MaxLength="20" />
+    <Property Name="sifre" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbldeneyimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="100" />
+    <Property Name="altbaslik" Type="varchar" MaxLength="1500" />
+    <Property Name="aciklama" Type="varchar(max)" />
+    <Property Name="tarih" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblegitimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="100" />
+    <Property Name="altbaslik1" Type="varchar" MaxLength="150" />
+    <Property Name="altbaslik2" Type="varchar" MaxLength="100" />
+    <Property Name="gno" Type="varchar" MaxLength="10" />
+    <Property Name="tarih" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblhakkimda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="varchar" MaxLength="20" />
+    <Property Name="soyad" Type="varchar" MaxLength="20" />
+    <Property Name="adres" Type="varchar" MaxLength="100" />
+    <Property Name="telefon" Type="varchar" MaxLength="20" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+    <Property Name="aciklama" Type="varchar(max)" />
+    <Property Name="resim" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblhobiler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hobiler" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbliletisim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adsoyad" Type="varchar" MaxLength="100" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+    <Property Name="konu" Type="varchar" MaxLength="10" />
+    <Property Name="mesaj" Type="varchar" MaxLength="1000" />
+    <Property Name="tarih" Type="date" />
+  </EntityType>
+  <EntityType Name="tblsertifikalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tarih" Type="varchar" MaxLength="50" />
+    <Property Name="aciklama" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tblsosyalmedya">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="varchar" MaxLength="30" />
+    <Property Name="link" Type="varchar" MaxLength="100" />
+    <Property Name="icon" Type="varchar" MaxLength="30" />
+    <Property Name="durum" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblyetenekler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="yetenek" Type="varchar" MaxLength="100" />
+    <Property Name="oran" Type="tinyint" />
+  </EntityType>
+  <EntityContainer Name="DbResumeModelStoreContainer">
+    <EntitySet Name="tbladmin" EntityType="Self.tbladmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbldeneyimler" EntityType="Self.tbldeneyimler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblegitimler" EntityType="Self.tblegitimler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblhakkimda" EntityType="Self.tblhakkimda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblhobiler" EntityType="Self.tblhobiler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblsertifikalar" EntityType="Self.tblsertifikalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblsosyalmedya" EntityType="Self.tblsosyalmedya" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblyetenekler" EntityType="Self.tblyetenekler" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

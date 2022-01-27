@@ -1,0 +1,37 @@
+﻿@using Resume.Models.Entity
+@model List<tblhakkimda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Hakkımda Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>Ad</label>
+        <textarea rows="1" class="form-control" name="ad">@item.ad</textarea><br />
+
+        <label>Soyad</label>
+        <textarea rows="1" class="form-control" name="soyad">@item.soyad</textarea><br />
+
+        <label>Adres</label>
+        <textarea rows="2" class="form-control" name="adres">@item.adres</textarea><br />
+
+        <label>Telefon</label>
+        <textarea rows="1" class="form-control" name="telefon">@item.telefon</textarea><br />
+
+        <label>E-Mail</label>
+        <textarea rows="1" class="form-control" name="mail">@item.mail</textarea><br />
+
+        <label>Fotograf</label>
+        <textarea rows="1" class="form-control" name="resim">@item.resim</textarea>
+
+        <label>Açıklama</label>
+        <textarea rows="4" class="form-control" name="aciklama">@item.aciklama</textarea><br />
+    }
+    <button class="btn btn-success">Güncelle</button>
+
+</form>

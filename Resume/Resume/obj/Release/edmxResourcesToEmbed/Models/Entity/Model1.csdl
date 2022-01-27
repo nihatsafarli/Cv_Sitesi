@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbResumeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbladmin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullaniciadi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbldeneyimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="altbaslik" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblegitimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="altbaslik1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="altbaslik2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblhakkimda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblhobiler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hobiler" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbliletisim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adsoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="konu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="mesaj" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tblsertifikalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aciklama" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblyetenekler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="oran" Type="Byte" />
+  </EntityType>
+  <EntityContainer Name="DbResumeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbladmin" EntityType="Self.tbladmin" />
+    <EntitySet Name="tbldeneyimler" EntityType="Self.tbldeneyimler" />
+    <EntitySet Name="tblegitimler" EntityType="Self.tblegitimler" />
+    <EntitySet Name="tblhakkimda" EntityType="Self.tblhakkimda" />
+    <EntitySet Name="tblhobiler" EntityType="Self.tblhobiler" />
+    <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" />
+    <EntitySet Name="tblsertifikalar" EntityType="Self.tblsertifikalar" />
+    <EntitySet Name="tblyetenekler" EntityType="Self.tblyetenekler" />
+    <EntitySet Name="tblsosyalmedya" EntityType="DbResumeModel.tblsosyalmedya" />
+  </EntityContainer>
+  <EntityType Name="tblsosyalmedya">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="link" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="durum" Type="Boolean" />
+  </EntityType>
+</Schema>

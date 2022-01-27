@@ -1,0 +1,17 @@
+﻿@using Resume.Models.Entity
+@model List<tblegitimler>
+<div class="resume-section-content">
+    <h2 class="mb-5">Eğitim Hayatı</h2>
+    @foreach (var item in Model)
+    {
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="flex-grow-1">
+            <h3 class="mb-0">@item.baslik</h3>
+            <div class="subheading mb-3">@item.altbaslik1</div>
+            <div>@item.altbaslik2</div>
+            <p>GNO: @item.gno</p>
+        </div>
+        <div class="flex-shrink-0"><span class="text-primary">@item.tarih</span></div>
+    </div>
+    }
+</div>

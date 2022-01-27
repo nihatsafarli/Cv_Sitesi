@@ -1,0 +1,42 @@
+﻿@using Resume.Models.Entity
+@model List<tbldeneyimler> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Deneyim Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Başlık</td>
+        <td>Alt Başlık</td>
+        <td>Tarih</td>
+        <td>Düzenle</td>
+        <td>Sil</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.id</td>
+    <td>@item.baslik</td>
+    <td>@item.altbaslik</td>
+    <td>@item.tarih</td>
+    <td>
+        <a class="btn btn-info btn-sm" href="/Deneyim/DeneyimGetir/@item.id">
+            <i class="fas fa-pencil-alt">
+            </i>
+            Düzenle
+        </a>
+    </td>
+    <td>
+        <a class="btn btn-danger btn-sm" href="/Deneyim/DeneyimSil/@item.id">
+            <i class="fas fa-trash">
+            </i>
+            Sil
+        </a>
+    </td>
+</tr>
+    }
+</table>
+<a href="/Deneyim/DeneyimEkle" class="btn btn-success">Yeni Deneyim Ekle</a>

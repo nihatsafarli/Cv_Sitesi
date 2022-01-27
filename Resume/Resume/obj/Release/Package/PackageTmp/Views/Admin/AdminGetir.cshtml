@@ -1,0 +1,22 @@
+﻿@model Resume.Models.Entity.tbladmin
+
+@{
+    ViewBag.Title = "AdminGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Kullanıcı Bilgisi Güncelleme Sayfası</h4>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Deneyim Id : ")
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control" })<br />
+
+    @Html.Label("Kullanıcı Adı: ")
+    @Html.TextBoxFor(x => x.kullaniciadi, new { @class = "form-control" })<br />
+
+    @Html.Label("Şifre : ")
+    @Html.TextBoxFor(x => x.sifre, new { @class = "form-control" })<br />
+    <button class="btn-success">Kullanıcı Bilgisi Güncelle</button>
+</form>

@@ -1,0 +1,38 @@
+﻿@using Resume.Models.Entity;
+@model List<tblhobiler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Hobi Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Hobiler1</td>              
+        <td>Düzenle</td>
+        <td>Sil</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.hobiler</td>                    
+            <td>
+                <a class="btn btn-info btn-sm" href="/Hobi/HobiGetir/@item.id">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-danger btn-sm" href="/Hobi/HobiSil/@item.id">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Hobi/HobiEkle/" class="btn btn-success">Yeni Hobi Ekle</a>
